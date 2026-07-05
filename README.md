@@ -1,21 +1,27 @@
 # 🎮 The PachVic Adventure
 
-Un emocionante juego de carreras desarrollado en Python utilizando Pygame, donde controlas un burrito politécnico navegando por un camino lleno de obstáculos y recompensas.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pygame](https://img.shields.io/badge/pygame-black?style=for-the-badge&logo=python&logoColor=white)
+![Arcade](https://img.shields.io/badge/Arcade-Game-red?style=for-the-badge)
+
+![Gameplay](media/gameplay.gif)
+
+Un emocionante juego de aventura espacial desarrollado en Python utilizando Pygame, donde controlas una nave intergaláctica navegando por un espacio lleno de obstáculos y recompensas.
 
 ## 📝 Descripción
 
-**The PachVic Adventure** es un juego arcade estilo "endless runner" donde el jugador debe esquivar vehículos enemigos mientras recolecta monedas para aumentar su puntuación. El juego presenta mecánicas de energía, sistema de puntuación, y una experiencia visual atractiva con sprites personalizados y efectos de sonido inmersivos.
+**The PachVic Adventure** es un juego arcade de aventura espacial estilo "endless runner" donde el jugador debe esquivar meteoritos mientras recolecta estrellas/monedas para aumentar su puntuación. El juego presenta mecánicas de energía, sistema de puntuación, y una experiencia visual atractiva con sprites espaciales personalizados y efectos de sonido inmersivos.
 
 ### Características Principales
 
-- 🚗 **Sistema de juego dinámico**: Esquiva enemigos en movimiento
-- 💰 **Recolección de monedas**: Acumula puntos y aumenta tu energía
-- ⚡ **Sistema de energía**: Administra tu energía para sobrevivir
+- 🚀 **Sistema de juego dinámico**: Esquiva meteoritos en movimiento
+- 💰 **Recolección de recompensas**: Acumula puntos y aumenta tu energía
+- ⚡ **Sistema de energía**: Administra los escudos de tu nave para sobrevivir
 - 🎵 **Efectos de sonido**: Experiencia auditiva inmersiva
 - 👤 **Gestión de jugadores**: Sistema de guardado con nombres personalizados
 - 🏆 **Tabla de clasificación**: Registra y consulta los mejores puntajes
 - ⚙️ **Opciones configurables**: Ajusta la velocidad y modo de pantalla completa
-- 🎨 **Sprites personalizados**: Gráficos únicos y temáticos
+- 🎨 **Sprites espaciales**: Gráficos únicos de naves y meteoritos
 
 ## 🛠️ Requisitos del Sistema
 
@@ -46,7 +52,7 @@ pip install pygame
 ### Iniciar el Juego
 
 ```bash
-python proyecto.py
+python main.py
 ```
 
 ### Controles
@@ -57,20 +63,20 @@ python proyecto.py
 
 ### Objetivo del Juego
 
-1. **Esquiva los vehículos enemigos** que vienen en dirección contraria
-2. **Recolecta monedas** para aumentar tu puntuación y energía
-3. **Administra tu energía** - ¡el juego termina cuando llega a 0!
-4. **Consigue la puntuación más alta** y registra tu nombre en la tabla de clasificación
+1. **Esquiva los meteoritos** que se dirigen hacia ti en el espacio
+2. **Recolecta recompensas (monedas)** para aumentar tu puntuación y recargar tus escudos
+3. **Administra tu energía** - ¡tu nave se destruye cuando la energía llega a 0!
+4. **Consigue la puntuación más alta** y registra tu nombre en la tabla de clasificación de la galaxia
 
 ### Mecánicas de Juego
 
-- **Energía**: Comienza con 100 puntos de energía
-  - Colisionar con enemigos reduce la energía
-  - Recolectar monedas aumenta la energía
+- **Energía**: Comienza con 100 puntos de escudo (energía)
+  - Colisionar con meteoritos reduce la energía
+  - Recolectar recompensas aumenta la energía
   - El juego termina cuando la energía llega a 0
 
 - **Puntuación**: 
-  - Cada moneda recolectada suma puntos
+  - Cada objeto recolectado suma puntos
   - La puntuación final se guarda en el sistema de clasificación
 
 - **Velocidad**: 
@@ -82,19 +88,27 @@ python proyecto.py
 ```
 The PachVic Adventure/
 │
-├── proyecto.py              # Archivo principal del juego
-├── proyecto.spec            # Especificaciones de PyInstaller
-├── Requirements.txt         # Dependencias del proyecto
-├── LICENSE                  # Licencia del proyecto
+├── main.py                 # Archivo principal que ejecuta el juego
+├── settings.py             # Configuraciones, variables y constantes globales
+├── state.py                # Estado dinámico del juego
+├── sprites.py              # Definición de clases de nave, meteoritos, etc.
+├── ui.py                   # Elementos de interfaz gráfica (botones, cajas de texto)
+├── proyecto_old.py         # Respaldo del código original monolítico
+├── proyecto.spec           # Especificaciones de PyInstaller
+├── requirements.txt        # Dependencias del proyecto
+├── LICENSE                 # Licencia del proyecto
 ├── README.md               # Este archivo
 ├── .gitignore              # Archivos ignorados por Git
 │
+├── media/                  # Archivos multimedia para documentación
+│   └── gameplay.gif        # Animación demostrativa del juego
+│
 ├── sprites/                # Recursos gráficos
-│   ├── Nave2.jpg          # Sprite del jugador
-│   ├── Porta.png          # Fondo del menú
-│   ├── levelBackground.png # Fondo del nivel
-│   ├── moneda.png         # Sprite de moneda
-│   └── m1.png, m2.jpg, m3.jpg  # Sprites de enemigos
+│   ├── Nave2.jpg           # Sprite de la nave (jugador)
+│   ├── Porta.png           # Fondo del menú
+│   ├── levelBackground.png # Fondo del nivel espacial
+│   ├── moneda.png          # Sprite de recolección
+│   └── m1.png, m2.jpg, m3.jpg # Sprites de meteoritos
 │
 ├── sounds/                 # Efectos de sonido
 │   ├── crash.wav          # Sonido de colisión
@@ -129,12 +143,12 @@ The PachVic Adventure/
    - Guardar progreso automático
    - Cargar partidas anteriores
 
-### Clases Principales
+### Clases Principales (en `sprites.py` y `ui.py`)
 
-- **`kar`**: Clase del jugador (burrito politécnico)
-- **`enemyCar`**: Clase de vehículos enemigos
-- **`thing`**: Clase de objetos recolectables (monedas)
-- **`landscape`**: Clase del fondo en movimiento
+- **`kar`**: Clase del jugador (nave espacial)
+- **`enemyCar`**: Clase de obstáculos (meteoritos)
+- **`thing`**: Clase de objetos recolectables
+- **`landscape`**: Clase del fondo estrellado en movimiento
 - **`button`**: Clase para botones de interfaz
 - **`InputBox`**: Clase para cuadros de texto
 
