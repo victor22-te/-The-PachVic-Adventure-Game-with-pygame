@@ -14,14 +14,14 @@ Un emocionante juego de aventura espacial desarrollado en Python utilizando Pyga
 
 ### Características Principales
 
-- 🚀 **Sistema de juego dinámico**: Esquiva meteoritos en movimiento
-- 💰 **Recolección de recompensas**: Acumula puntos y aumenta tu energía
-- ⚡ **Sistema de energía**: Administra los escudos de tu nave para sobrevivir
-- 🎵 **Efectos de sonido**: Experiencia auditiva inmersiva
-- 👤 **Gestión de jugadores**: Sistema de guardado con nombres personalizados
-- 🏆 **Tabla de clasificación**: Registra y consulta los mejores puntajes
-- ⚙️ **Opciones configurables**: Ajusta la velocidad y modo de pantalla completa
-- 🎨 **Sprites espaciales**: Gráficos únicos de naves y meteoritos
+-  **Sistema de juego dinámico**: Esquiva meteoritos en movimiento
+-  **Recolección de recompensas**: Acumula puntos y aumenta tu energía
+-  **Sistema de energía**: Administra los escudos de tu nave para sobrevivir
+-  **Efectos de sonido**: Experiencia auditiva inmersiva
+-  **Gestión de jugadores**: Sistema de guardado con nombres personalizados
+-  **Tabla de clasificación**: Registra y consulta los mejores puntajes
+-  **Opciones configurables**: Ajusta la velocidad y modo de pantalla completa
+-  **Sprites espaciales**: Gráficos únicos de naves y meteoritos
 
 ## 🛠️ Requisitos del Sistema
 
