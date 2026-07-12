@@ -8,7 +8,7 @@
 
 Un emocionante juego de aventura espacial desarrollado en Python utilizando Pygame, donde controlas una nave intergaláctica navegando por un espacio lleno de obstáculos y recompensas.
 
-## 📝 Descripción
+## Descripción
 
 **The PachVic Adventure** es un juego arcade de aventura espacial estilo "endless runner" donde el jugador debe esquivar meteoritos mientras recolecta estrellas/monedas para aumentar su puntuación. El juego presenta mecánicas de energía, sistema de puntuación, y una experiencia visual atractiva con sprites espaciales personalizados y efectos de sonido inmersivos.
 
@@ -23,13 +23,13 @@ Un emocionante juego de aventura espacial desarrollado en Python utilizando Pyga
 -  **Opciones configurables**: Ajusta la velocidad y modo de pantalla completa
 -  **Sprites espaciales**: Gráficos únicos de naves y meteoritos
 
-## 🛠️ Requisitos del Sistema
+## Requisitos del Sistema
 
 - Python 3.7 o superior
 - Pygame
 - Sistema operativo: Windows, macOS, o Linux
 
-## 📦 Instalación
+## Instalación
 
 1. **Clonar el repositorio**:
 ```bash
@@ -47,7 +47,7 @@ O instalar Pygame directamente:
 pip install pygame
 ```
 
-## 🎮 Cómo Jugar
+## Cómo Jugar
 
 ### Iniciar el Juego
 
@@ -83,7 +83,7 @@ python main.py
   - Configurable desde el menú de opciones
   - Afecta la dificultad del juego
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 The PachVic Adventure/
@@ -122,7 +122,7 @@ The PachVic Adventure/
 └── build/                  # Archivos de compilación (PyInstaller)
 ```
 
-## 🎯 Funcionalidades Detalladas
+## Funcionalidades Detalladas
 
 ### Sistema de Menús
 
@@ -152,7 +152,7 @@ The PachVic Adventure/
 - **`button`**: Clase para botones de interfaz
 - **`InputBox`**: Clase para cuadros de texto
 
-## 🔧 Compilación del Ejecutable
+## Compilación del Ejecutable
 
 Para crear un ejecutable del juego usando PyInstaller:
 
@@ -162,7 +162,7 @@ pyinstaller proyecto.spec
 
 El ejecutable se generará en la carpeta `dist/`.
 
-## 🎨 Personalización
+## Personalización
 
 ### Modificar Velocidad del Juego
 
@@ -186,7 +186,7 @@ speed = 5  # Valores recomendados: 1-10
 nuevoSonido = pygame.mixer.Sound(directory + "\\sounds\\tusonido.wav")
 ```
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### El juego no inicia
 - Verifica que tienes instalado Pygame: `pip install pygame`
@@ -201,24 +201,24 @@ nuevoSonido = pygame.mixer.Sound(directory + "\\sounds\\tusonido.wav")
 - Asegúrate de ejecutar el juego desde el directorio raíz del proyecto
 - Verifica que todas las carpetas (`sprites/`, `sounds/`, `save/`) existan
 
-## 📜 Licencia
+## Licencia
 
 Este proyecto está bajo la licencia especificada en el archivo `LICENSE`.
 
-## 👥 Autores
+## Autores
 
 - **PachVic Team** - Desarrollo y diseño inicial
 
-## 🙏 Créditos
+## Créditos
 
 - **Pygame Community** - Framework de desarrollo
 - **Snow Bros** - Inspiración musical
 - Sprites y assets personalizados creados para el proyecto
 
-## 📞 Contacto
+## Contacto
 
 Para preguntas, sugerencias o reportar bugs, por favor abre un issue en el repositorio.
 
 ---
 
-¡Disfruta jugando **The PachVic Adventure**! 🎮✨
+¡Disfruta jugando **The PachVic Adventure**! 🤠🕷️🥵
